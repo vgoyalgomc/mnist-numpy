@@ -19,7 +19,7 @@ The MNIST dataset is included in this repository under `data/raw/`, so no separa
 
 ## Setup
 
-Requires Python 3.9 or newer.
+Requires Python 3.12 or newer.
 
 Clone the repository and move into it:
 
