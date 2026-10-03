@@ -31,9 +31,12 @@ cd mnist-numpy
 Create and activate a virtual environment, then install the project dependencies:
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
+python --version
 python -m pip install -r requirements.txt
 ```
 
-On Windows, activate the environment with `.venv\Scripts\activate` instead.
+`python --version` should print `Python 3.12.x` before you install anything.
+
+On Windows, create the environment with `py -3.12 -m venv .venv` and activate it with `.venv\Scripts\activate` instead.
