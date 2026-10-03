@@ -24,7 +24,7 @@ Requires Python 3.9 or newer.
 Clone the repository and move into it:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/vgoyalgomc/mnist-numpy.git
 cd mnist-numpy
 ```
 
