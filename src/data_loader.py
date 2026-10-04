@@ -31,3 +31,16 @@ def load_mnist(data_dir=DATA_DIR):
     test_labels = read_idx(data_dir/"t10k-labels.idx1-ubyte")
 
     return (train_images, train_labels), (test_images, test_labels)
+
+def preprocess_images(images):
+    flat = images.reshape(images.shape[0],-1)
+    return flat.astype(np.float32)/255
+
+def one_hot(labels,num_classes=10):
+    return np.eye(num_classes, dtype=np.float32)[labels]
+
+def train_val_split(x,y,val_size=10000, seed=42):
+    rng = np.random.default_rng(seed)
+    idx = rng.permutation(len(x))
+    val_idx, train_idx = idx[:val_size], idx[val_size:]
+    return (x[train_idx], y[train_idx]), (x[val_idx], y[val_idx])
